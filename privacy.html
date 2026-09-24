@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PayMonth — 개인정보처리방침</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap">
+<style>
+  :root {
+    --bg: #f7f6f3;
+    --surface: #ffffff;
+    --ink: #1c1b22;
+    --ink-soft: #55535e;
+    --ink-faint: #8a879a;
+    --accent: #4a3382;
+    --rule: #e4e1dc;
+    --brand-a: #292e6b;
+    --brand-b: #5c3390;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #15131c;
+      --surface: #1e1b29;
+      --ink: #ede9f7;
+      --ink-soft: #a9a5b8;
+      --ink-faint: #726d84;
+      --accent: #b7a4ec;
+      --rule: #322c42;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.75;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 56px 24px 96px; }
+  .back { display: inline-block; margin-bottom: 24px; font-size: 14px; color: var(--ink-faint); }
+  h1 { font-size: 24px; margin: 0 0 4px; }
+  .updated { font-size: 13px; color: var(--ink-faint); margin: 0 0 32px; }
+  h2 { font-size: 17px; margin: 36px 0 10px; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 20px; }
+  li { margin-bottom: 8px; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  strong { font-weight: 700; }
+  .card {
+    background: var(--surface); border: 1px solid var(--rule);
+    border-radius: 14px; padding: 18px 20px; font-size: 15px; margin: 0 0 14px;
+  }
+  footer {
+    margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--rule);
+    font-size: 13px; color: var(--ink-faint);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">← PayMonth</a>
+  <h1>개인정보처리방침</h1>
+  <p class="updated">최종 수정일: 2026-08-11</p>
+
+  <div class="card">
+    <p>사용자가 입력한 구독 정보(서비스명, 금액, 결제일, 메모 등)는 오직 이 기기 안에만 저장되며, 개발자를 포함한 누구에게도 전송되지 않습니다.</p>
+    <p>이 앱은 광고로 무료 운영됩니다. 광고를 보여주기 위해 Google AdMob을 사용하며, 이 과정에서 광고 SDK가 기기 식별자 등 광고 관련 정보를 처리합니다. 아래에 무엇이 어떻게 쓰이는지 구체적으로 적어 둡니다.</p>
+  </div>
+
+  <h2>사용자가 입력한 구독 정보</h2>
+  <p>사용자가 직접 입력한 다음 항목이 기기 내부 저장소에만 보관됩니다.</p>
+  <ul>
+    <li>구독 서비스 이름, 금액, 결제 주기, 결제일</li>
+    <li>결제 수단에 붙인 이름 (예: "신한 체크 1234")</li>
+    <li>메모, 해지 페이지 주소</li>
+  </ul>
+  <p>이 데이터는 앱과 위젯이 함께 읽을 수 있도록 기기 내 공유 영역에 저장되고, 개발자를 포함한 외부로는 전송되지 않습니다. 앱을 삭제하면 함께 삭제됩니다.</p>
+  <p><strong>카드 번호 전체, 계좌번호, 비밀번호는 입력받지 않습니다.</strong> 결제 수단은 사용자가 구분할 수 있는 이름만 적도록 되어 있습니다.</p>
+
+  <h2>광고</h2>
+  <p>이 앱은 Google AdMob을 통해 광고를 표시합니다. 광고 SDK는 광고를 제공하고 성과를 측정하기 위해 기기 식별자(IDFA 등), 대략적인 위치, 광고 노출·클릭 정보를 처리할 수 있습니다. 이 정보는 사용자가 입력한 구독 데이터와는 별개이며, 구독 정보가 광고 SDK로 전달되는 일은 없습니다.</p>
+  <p>iOS는 앱 최초 실행 직후 추적 허용 여부를 묻습니다("추적 금지 요청" 또는 "허용"). 허용하면 관심사 기반의 광고가, 거부하면 비개인화 광고가 표시되며 — 어느 쪽을 선택해도 앱 사용에는 영향이 없습니다. 이 선택은 설정 &gt; 이 앱 안의 "광고 추적 허용 변경"에서, 또는 iOS 설정 &gt; 개인정보 보호 및 보안 &gt; 추적에서 언제든 바꿀 수 있습니다.</p>
+  <p>광고 SDK가 실제로 어떤 정보를 어떻게 처리하는지는 Google의 정책을 따릅니다: <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>, <a href="https://support.google.com/admob/answer/6128543">AdMob 데이터 처리 안내</a>.</p>
+
+  <h2>외부로 나가는 통신</h2>
+  <p>앱이 사용자가 입력한 구독 데이터를 외부로 보내는 경우는 없습니다. 다음 경우에만 외부와 통신합니다.</p>
+  <ul>
+    <li><strong>광고 표시</strong> — Google AdMob 서버와 통신해 광고를 받아옵니다. 위 "광고" 항목 참고.</li>
+    <li><strong>해지 페이지 열기</strong> — 사용자가 해지 버튼을 눌렀을 때, 해당 서비스의 웹페이지를 앱 안의 브라우저로 엽니다. 이때 앱은 어떤 정보도 함께 보내지 않습니다. 그 페이지에서 일어나는 일은 해당 서비스의 개인정보처리방침을 따릅니다.</li>
+    <li><strong>서비스 목록 갱신</strong> — 앱에 내장된 서비스 목록(이름·평균 금액·해지 링크)의 최신본을 내려받을 수 있습니다. 이 요청에는 사용자 데이터가 포함되지 않습니다.</li>
+  </ul>
+
+  <h2>알림</h2>
+  <p>결제일 알림은 기기 안에서 예약되고 기기 안에서 울립니다. 푸시 서버를 사용하지 않으므로 알림 내용이 외부로 나가지 않습니다.</p>
+
+  <h2>백업 파일</h2>
+  <p>설정에서 백업 파일을 만들면 사용자가 고른 위치(파일 앱, iCloud Drive 등)에 JSON 파일로 저장됩니다. 저장 위치와 공유 여부는 전적으로 사용자가 정합니다. 앱이 이 파일을 어디로도 보내지 않습니다.</p>
+
+  <h2>아동의 개인정보</h2>
+  <p>이 앱은 만 13세 미만 아동을 대상으로 하지 않습니다. 광고 SDK가 아동 대상 서비스로 설정되어 있지 않으므로, 만 13세 미만 사용자는 이 앱을 사용하지 않는 것을 권장합니다.</p>
+
+  <h2>문의</h2>
+  <p>문의: <a href="mailto:tigerdbsgh@gmail.com">tigerdbsgh@gmail.com</a></p>
+
+  <h2>변경</h2>
+  <p>이 방침이 바뀌면 이 문서의 최종 수정일을 갱신하고, 의미 있는 변경이 있을 경우 앱 업데이트 설명에 함께 안내합니다.</p>
+
+  <footer>© 2026 PayMonth</footer>
+</div>
+</body>
+</html>
