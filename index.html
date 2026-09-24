@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PayMonth — 지원</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<title>PayMonth — 흩어진 구독을 한눈에</title>
+<meta name="description" content="넷플릭스, 유튜브 프리미엄 등 여러 구독의 결제일과 금액을 한곳에서 관리하는 iOS 앱, PayMonth.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap">
 <style>
   :root {
     --bg: #f7f6f3;
@@ -16,6 +17,7 @@
     --rule: #e4e1dc;
     --brand-a: #292e6b;
     --brand-b: #5c3390;
+    --chip-bg: #efeaf9;
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -26,6 +28,7 @@
       --ink-faint: #726d84;
       --accent: #b7a4ec;
       --rule: #322c42;
+      --chip-bg: #2a2438;
     }
   }
   * { box-sizing: border-box; }
@@ -36,42 +39,111 @@
     font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.75;
   }
-  .wrap { max-width: 640px; margin: 0 auto; padding: 72px 24px 96px; }
-  header { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 24px 96px; }
+
+  /* Hero */
+  .hero {
+    padding: 72px 0 40px;
+    text-align: center;
+  }
   .mark {
-    width: 52px; height: 52px; flex: none; border-radius: 14px;
+    width: 64px; height: 64px; margin: 0 auto 20px;
+    border-radius: 18px;
     background: linear-gradient(135deg, var(--brand-a), var(--brand-b));
     display: flex; align-items: center; justify-content: center;
-    color: #fff; font-weight: 700; font-size: 22px;
+    color: #fff; font-weight: 800; font-size: 26px;
+    box-shadow: 0 10px 28px -10px rgba(74, 51, 130, 0.5);
   }
-  h1 { margin: 0; font-size: 26px; letter-spacing: -0.01em; }
-  .tagline { margin: 2px 0 0; font-size: 14px; color: var(--ink-soft); }
-  hr { border: none; border-top: 1px solid var(--rule); margin: 32px 0; }
-  h2 { font-size: 18px; margin: 40px 0 12px; }
+  .hero h1 { margin: 0 0 8px; font-size: 30px; font-weight: 800; letter-spacing: -0.01em; }
+  .hero .tagline { margin: 0 auto 24px; max-width: 420px; font-size: 16px; color: var(--ink-soft); }
+  .cta {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: linear-gradient(135deg, var(--brand-a), var(--brand-b));
+    color: #fff; font-weight: 700; font-size: 15px;
+    padding: 13px 26px; border-radius: 999px; text-decoration: none;
+    box-shadow: 0 10px 24px -10px rgba(74, 51, 130, 0.55);
+  }
+  .cta:hover { opacity: 0.92; }
+
+  hr { border: none; border-top: 1px solid var(--rule); margin: 40px 0; }
+  h2 { font-size: 18px; margin: 0 0 16px; }
   p { margin: 0 0 14px; }
   ul { margin: 0 0 14px; padding-left: 20px; }
   li { margin-bottom: 8px; }
   a { color: var(--accent); text-underline-offset: 3px; }
+
+  /* Feature grid */
+  .features { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 480px) { .features { grid-template-columns: 1fr; } }
+  .feature {
+    background: var(--surface); border: 1px solid var(--rule);
+    border-radius: 14px; padding: 18px 18px 16px;
+  }
+  .feature .icon {
+    width: 34px; height: 34px; border-radius: 10px;
+    background: var(--chip-bg); color: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; margin-bottom: 10px;
+  }
+  .feature h3 { margin: 0 0 4px; font-size: 15px; font-weight: 700; }
+  .feature p { margin: 0; font-size: 13.5px; color: var(--ink-soft); }
+
   .card {
     background: var(--surface); border: 1px solid var(--rule);
     border-radius: 14px; padding: 20px 22px; font-size: 15px;
   }
   .card p:last-child { margin-bottom: 0; }
+
   footer {
     margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--rule);
     font-size: 13px; color: var(--ink-faint);
   }
+  footer a { color: var(--ink-faint); }
+  footer .links { margin-bottom: 8px; }
+  footer .links a { margin-right: 14px; }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <header>
+
+  <div class="hero">
     <div class="mark">P</div>
-    <div>
-      <h1>PayMonth</h1>
-      <p class="tagline">흩어진 구독을 한눈에 정리</p>
+    <h1>PayMonth</h1>
+    <p class="tagline">흩어진 구독을 한눈에 정리하고, 결제일을 놓치지 않게.</p>
+    <a class="cta" href="https://apps.apple.com/us/app/paymonth/id6807873804">
+      App Store에서 받기 →
+    </a>
+  </div>
+
+  <h2>이런 앱이에요</h2>
+  <p>넷플릭스, 유튜브 프리미엄 같은 구독 서비스를 하나씩 등록해두면, 이번 달에 얼마가 나가는지·다음엔 언제 결제되는지를 한 화면에서 볼 수 있어요. 결제일이 다가오면 미리 알림도 보내드려요.</p>
+  <p style="color: var(--ink-faint); font-size: 13.5px;">iOS는 다른 앱의 결제 내역을 자동으로 읽어올 방법을 제공하지 않아서, 처음 등록은 직접 입력하는 방식이에요. 대신 자주 쓰는 서비스는 목록에서 고르기만 하면 금액·주기·해지 링크가 자동으로 채워집니다. 한 번 등록해두면 계속 관리돼요.</p>
+
+  <hr>
+
+  <h2>주요 기능</h2>
+  <div class="features">
+    <div class="feature">
+      <div class="icon">₩</div>
+      <h3>이번 달 지출 한눈에</h3>
+      <p>이번 달 총액과 월 평균, 카테고리·결제수단별 분석까지.</p>
     </div>
-  </header>
+    <div class="feature">
+      <div class="icon">🔔</div>
+      <h3>결제일 알림</h3>
+      <p>결제 며칠 전, 원하는 시각에 미리 알려드려요.</p>
+    </div>
+    <div class="feature">
+      <div class="icon">📅</div>
+      <h3>결제 캘린더</h3>
+      <p>이번 달 어느 날짜에 뭐가 빠져나가는지 달력으로 확인.</p>
+    </div>
+    <div class="feature">
+      <div class="icon">✕</div>
+      <h3>해지 도우미</h3>
+      <p>해지 페이지로 바로 연결하고, 해지 여부를 기록해둬요.</p>
+    </div>
+  </div>
 
   <hr>
 
@@ -89,18 +161,19 @@
   아니요. 해지 페이지를 바로 열어 주고, 해지한 사실을 기록해 둡니다. 실제 해지는 해당 서비스에서 직접 하셔야 합니다.</p>
 
   <p><strong>입력한 구독 정보는 어디에 저장되나요?</strong><br>
-  이 기기 안에만 저장되며 어디로도 전송되지 않습니다. 자세한 내용은 <a href="https://claude.ai/code/artifact/dc028af0-a8d6-47be-bdca-6cad3a76d632">개인정보처리방침</a>을 참고하세요.</p>
+  이 기기 안에만 저장되며 어디로도 전송되지 않습니다. 자세한 내용은 <a href="privacy.html">개인정보처리방침</a>을 참고하세요.</p>
 
   <p><strong>알림이 오지 않아요.</strong><br>
-  iOS 설정 &gt; 알림 &gt; PayMonth에서 알림이 허용되어 있는지 확인해 주세요. 앱 안 설정 화면에서 알림 시점(D-3 / D-1 / 당일)도 바꿀 수 있습니다.</p>
+  iOS 설정 &gt; 알림 &gt; PayMonth에서 알림이 허용되어 있는지 확인해 주세요. 앱 안 설정 화면에서 알림 시점(D-3 / D-1 / 당일)과 시각도 바꿀 수 있습니다.</p>
 
-  <h2>링크</h2>
-  <ul>
-    <li><a href="https://claude.ai/code/artifact/dc028af0-a8d6-47be-bdca-6cad3a76d632">개인정보처리방침</a></li>
-    <li><a href="mailto:tigerdbsgh@gmail.com">이메일 문의</a></li>
-  </ul>
-
-  <footer>© 2026 PayMonth</footer>
+  <footer>
+    <div class="links">
+      <a href="privacy.html">개인정보처리방침</a>
+      <a href="mailto:tigerdbsgh@gmail.com">이메일 문의</a>
+      <a href="https://apps.apple.com/us/app/paymonth/id6807873804">App Store</a>
+    </div>
+    © 2026 PayMonth
+  </footer>
 </div>
 </body>
 </html>
